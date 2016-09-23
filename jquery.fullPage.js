@@ -1422,7 +1422,7 @@
         * Scrolls the site to the given element and scrolls to the slide if a callback is given.
         */
         function scrollPage(element, callback, isMovementUp){
-            if(typeof element === 'undefined'){ return; } //there's no element to scroll, leaving the function
+            if(typeof element === 'undefined' || !element.length){ return; } //there's no element to scroll, leaving the function
 
             var dtop = getDestinationPosition(element);
 
